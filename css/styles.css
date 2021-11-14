@@ -416,6 +416,12 @@ h3 {
 /*====================*/
 /* RESPONSIVE */
 /*====================*/
+@media screen and (min-width: 380px) {
+	.skills__content {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: none;
+	}
+}
 @media screen and (min-width: 560px) {
 	.home__body,
 	.social__info {
@@ -423,10 +429,6 @@ h3 {
 		gap: var(--mb-3);
 		justify-content: center;
 		transition: all 0.45s ease-in;
-	}
-	.skills__content {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: none;
 	}
 	.portfolio__content {
 		flex-direction: row;
