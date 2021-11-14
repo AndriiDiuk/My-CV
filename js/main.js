@@ -1,9 +1,9 @@
+const headerNav = document.querySelector('.header')
+
 /*==================== SHOW MENU ====================*/
 function navMenu() {
-	const headerNav = document.querySelector('.header')
 	const mainToggle = document.querySelector('.main__toggle')
 	const closeNav = document.querySelector('.header__nav-close')
-	// const navLink = document.querySelector('.nav__link')
 
 	mainToggle.addEventListener('click', () => {
 		headerNav.classList.add('visible');
@@ -16,9 +16,8 @@ navMenu();
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
 	const scrollTop = document.getElementById('scroll-top');
-	const headerNav = document.querySelector('.header')
 
-	if (this.scrollY >= 100) {
+	if (this.scrollY >= 200) {
 		scrollTop.classList.add('show-scroll')
 		headerNav.classList.remove('visible');
 	} else {
@@ -31,12 +30,8 @@ window.addEventListener('scroll', scrollTop)
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
-
-// Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
 
