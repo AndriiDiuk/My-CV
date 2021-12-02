@@ -225,9 +225,26 @@ h3 {
 }
 .home__profession {
 	display: flex;
+	width: 8ch;
 	margin: 0 0 10px 0;
 	font-size: var(--h3-font-size);
 	align-items: center;
+	animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 2px solid;
+	color: var(--title-color);
+}
+@keyframes typing {
+	from {
+		width: 0;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
 }
 .home__body {
 	display: flex;
