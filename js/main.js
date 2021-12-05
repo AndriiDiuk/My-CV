@@ -52,4 +52,19 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme())
 	localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
+/*==================== Scroll Reveal ====================*/
+const sr = ScrollReveal({
+	origin: "top",
+	distance: "60px",
+	duration: 2000,
+	delay: 400,
+	// reset: true
+})
+sr.reveal(`.social`)
+sr.reveal(`.profile`, { delay: 600, interval: 10 })
+sr.reveal(`.skills`, { delay: 400 })
+sr.reveal(`.education`, { delay: 600, interval: 10 })
+sr.reveal(`.portfolio`, { delay: 400 })
+sr.reveal(`.languages`, { delay: 600 })
+sr.reveal(` .portfolio__btns`, { origin: 'right' })
+/*======================================================*/
