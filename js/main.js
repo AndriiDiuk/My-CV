@@ -13,6 +13,7 @@ function navMenu() {
 		headerNav.classList.remove('visible');
 	}))
 	closeNav.addEventListener('click', () => {
+		headerNav.classList.remove('visible');
 	})
 }
 navMenu();
