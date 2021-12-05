@@ -4,15 +4,19 @@ const headerNav = document.querySelector('.header')
 function navMenu() {
 	const mainToggle = document.querySelector('.main__toggle')
 	const closeNav = document.querySelector('.header__nav-close')
+	const navLink = document.querySelectorAll('.nav__link')
 
 	mainToggle.addEventListener('click', () => {
 		headerNav.classList.add('visible');
 	})
-	closeNav.addEventListener('click', () => {
+	navLink.forEach(n => n.addEventListener('click', () => {
 		headerNav.classList.remove('visible');
+	}))
+	closeNav.addEventListener('click', () => {
 	})
 }
 navMenu();
+
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
 	const scrollTop = document.getElementById('scroll-top');

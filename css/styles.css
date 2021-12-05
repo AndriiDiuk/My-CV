@@ -43,6 +43,7 @@ body {
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
 	color: var(--text-color);
+	transition: background-color 0.8s ease-in-out;
 }
 h1,
 h1,
@@ -92,6 +93,7 @@ h3 {
 .header.visible {
 	visibility: visible;
 	transform: translateY(0%);
+	transition: transform 0.3s ease;
 }
 /*====================*/
 /* NAV  */
